@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using MVCProject.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MVCProject
@@ -8,6 +9,7 @@ namespace MVCProject
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new VerifySession());
         }
     }
 }
